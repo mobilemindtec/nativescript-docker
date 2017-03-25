@@ -12,6 +12,7 @@ Set configurations in docker.sh:
 * APP_HOME - Set app home to run tns commands
 * ANDROID_HOME - Set android sdk home if you not have environment variable already configured
 * GRADLE_HOME - Set gradle home if you not have environment variable already configured
+* DEVICE_ID - Set device id to run nativecript app
 
 ## Create container
 
