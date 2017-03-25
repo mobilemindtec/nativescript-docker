@@ -7,6 +7,7 @@ CMD="$@"
 # app 
 CONTAINER_NAME="" # set container name
 APP_HOME="" # set app home
+DEVICE_ID="" # set your device id to run
 
 # android and gardle
 
@@ -32,6 +33,20 @@ if [ $CMD == "bash" ]; then
 		$VOLUMES \
 		$CONTAINER_NAME bash
 
+elif [ $CMD == "run android"]; then
+
+	docker run -it \
+		--rm --privileged \
+		$VOLUMES \
+		$CONTAINER_NAME bash	-c "tns run android --device $DEVICE_ID --log trace"
+	
+elif [ $CMD == "livesync android"]; then
+
+	docker run -it \
+		--rm --privileged \
+		$VOLUMES \
+		$CONTAINER_NAME bash	-c "tns livesync android --device $DEVICE_ID --log trace"
+		
 else		
 
 	docker run -it \
