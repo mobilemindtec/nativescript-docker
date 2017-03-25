@@ -26,27 +26,27 @@ VOLUMES="
 	-v $GRADLE_HOME:/gradle
 "
 
-if [ $CMD == "bash" ]; then
+if [ "$CMD" == "bash" ]; then
 
 	docker run -it \
 		--rm --privileged \
 		$VOLUMES \
 		$CONTAINER_NAME bash
 
-elif [ $CMD == "run android"]; then
+elif [ "$CMD" == "run android" ]; then
 
 	docker run -it \
 		--rm --privileged \
 		$VOLUMES \
 		$CONTAINER_NAME bash	-c "tns run android --device $DEVICE_ID --log trace"
 	
-elif [ $CMD == "livesync android"]; then
+elif [ "$CMD" == "livesync android" ]; then
 
 	docker run -it \
 		--rm --privileged \
 		$VOLUMES \
 		$CONTAINER_NAME bash	-c "tns livesync android --device $DEVICE_ID --log trace"
-		
+
 else		
 
 	docker run -it \
@@ -54,4 +54,4 @@ else
 		$VOLUMES \
 		$CONTAINER_NAME bash -c "$CMD"	
 
-fi	
+fi		
