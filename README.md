@@ -1,6 +1,8 @@
 # nativescript-docker
+
 Docker NativeScript Develpment
 
+*** Install android out of docker and you can have one docker to each nativescript version or nativescript app 
 
 ## Configure
 
