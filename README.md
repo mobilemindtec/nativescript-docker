@@ -4,7 +4,7 @@ Docker NativeScript Develpment
 
 ## Configure
 
-Set in docker.sh configurations:
+Set configurations in docker.sh:
 
 * CONTAINER_NAME - Set name of container
 * APP_HOME - Set app home to run tns commands
