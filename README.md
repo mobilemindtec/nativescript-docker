@@ -47,4 +47,12 @@ $ docker commit IMAGE_ID CONTAINER_NAME
 
 $ ./docker.sh tns run android --device DEVICE_ID
 
+# or, if you set device id
+
+./docker.sh run android
+
+# and
+
+./docker.sh livesync android
+
 ```
